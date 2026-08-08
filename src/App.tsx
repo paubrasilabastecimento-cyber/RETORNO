@@ -508,20 +508,43 @@ export default function App() {
 
      // 4a. Setup real-time database updates via Firestore Live Sync if active
   useEffect(() => {
-    if (!clientPermissionDenied && isClientFirebaseActive()) {
-      console.log("[ClientFirebase] Inicializando sincronização em tempo real nativa com Firestore...");
-      const unsubscribe = subscribeToFirestore((db) => {
-        // Skip applying updates if there was a recent local write on this client to avoid race conditions
-        if (Date.now() - lastWriteTime.current < 1500) {
-          return;
-        }
-        applyDirectDb(db);
-      });
-      return () => {
-        console.log("[ClientFirebase] Cancelando inscrição em tempo real com Firestore...");
-        unsubscribe();
-      };
-    }
+    let activeUnsub: (() => void) | null = null;
+
+    const setupFirestoreSubscription = () => {
+      if (activeUnsub) {
+        activeUnsub();
+        activeUnsub = null;
+      }
+      if (!clientPermissionDenied && isClientFirebaseActive()) {
+        console.log("[ClientFirebase] Inicializando/Atualizando inscrição em tempo real com Firestore...");
+        activeUnsub = subscribeToFirestore((db) => {
+          // Skip applying updates if there was a recent local write on this client to avoid race conditions
+          if (Date.now() - lastWriteTime.current < 1500) {
+            return;
+          }
+          applyDirectDb(db);
+        });
+      }
+    };
+
+    setupFirestoreSubscription();
+
+    const handleConfigChange = () => {
+      console.log("[App] Configuração do banco atualizada. Reiniciando listeners em tempo real do Firestore...");
+      // Delay slightly to ensure getClientFirestore gets the new instance
+      setTimeout(() => {
+        setupFirestoreSubscription();
+      }, 100);
+    };
+
+    window.addEventListener('firebase_config_changed', handleConfigChange);
+    window.addEventListener('server_config_updated', handleConfigChange);
+
+    return () => {
+      if (activeUnsub) activeUnsub();
+      window.removeEventListener('firebase_config_changed', handleConfigChange);
+      window.removeEventListener('server_config_updated', handleConfigChange);
+    };
   }, [clientPermissionDenied]);
 
   // 4b. Listen to global control state (app_control/active_database) in real-time from app boot via Firestore onSnapshot
@@ -548,6 +571,38 @@ export default function App() {
 
     return () => {
       unsubscribeControl();
+    };
+  }, []);
+
+  // 4c. Server-Sent Events (SSE) stream listener for real-time synchronization across different browser windows and devices
+  useEffect(() => {
+    let eventSource: EventSource | null = null;
+
+    try {
+      eventSource = new EventSource('/api/db/events');
+
+      eventSource.onmessage = (event) => {
+        try {
+          if (!event.data) return;
+          const data = JSON.parse(event.data);
+          if (data && data.db) {
+            if (Date.now() - lastWriteTime.current < 1500) {
+              return;
+            }
+            applyDirectDb(data.db);
+          }
+        } catch (e) {}
+      };
+
+      eventSource.onerror = () => {
+        // EventSource will automatically attempt reconnection
+      };
+    } catch (e) {}
+
+    return () => {
+      if (eventSource) {
+        eventSource.close();
+      }
     };
   }, []);
 
