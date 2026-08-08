@@ -243,7 +243,7 @@ function triggerAnonymousAuth() {
   }
 }
 
-// Fixed control configuration (banco-01-34be4 is our permanent static control database channel)
+// Fixed control configuration (banco-01-teste is our permanent static control database channel)
 export const CONTROL_FIREBASE_CONFIG = FIREBASE_PRESETS[0].config;
 
 let controlAppInstance: any = null;

@@ -303,7 +303,7 @@ export async function triggerGlobalDatabaseSwitch(
 ) {
   try {
     const activeConfig = localStorage.getItem('active_firebase_config');
-    let activeProjectId = 'banco-01-34be4';
+    let activeProjectId = 'banco-01-teste';
     if (activeConfig) {
       try {
         const parsed = JSON.parse(activeConfig);

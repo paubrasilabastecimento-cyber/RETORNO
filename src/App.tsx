@@ -698,7 +698,7 @@ export default function App() {
     localStorage.setItem('logiroute_authenticated_user_id', user.id);
 
     const activeConfig = getActiveFirebaseConfig();
-    console.log(`[Login Verification] Usuário '${user.name}' (${user.username || user.id}) autenticado com sucesso. Banco de Dados Ativo no Servidor/Cliente: ${activeConfig?.projectId || 'banco-01-34be4'}`);
+    console.log(`[Login Verification] Usuário '${user.name}' (${user.username || user.id}) autenticado com sucesso. Banco de Dados Ativo no Servidor/Cliente: ${activeConfig?.projectId || 'banco-01-teste'}`);
 
     // Route active tabs based on permission roles
     if (user.role === 'conferente') {

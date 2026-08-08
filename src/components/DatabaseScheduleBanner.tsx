@@ -36,7 +36,7 @@ export const DatabaseScheduleBanner: React.FC<DatabaseScheduleBannerProps> = ({ 
   const lastHandledProjectIdRef = useRef<string | null>(null);
 
   const [activeProjectId, setActiveProjectId] = useState<string>(() => {
-    return getActiveFirebaseConfig()?.projectId || 'banco-01-34be4';
+    return getActiveFirebaseConfig()?.projectId || 'banco-01-teste';
   });
 
   useEffect(() => {

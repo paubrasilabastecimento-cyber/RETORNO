@@ -73,7 +73,7 @@ export default function Header({
   const [lastSyncTimestamp, setLastSyncTimestamp] = useState<number>(getLastSuccessfulSyncTime());
   const [isManualSyncing, setIsManualSyncing] = useState(false);
   const [activeDbProjectId, setActiveDbProjectId] = useState<string>(() => {
-    return getActiveFirebaseConfig()?.projectId || 'banco-01-34be4';
+    return getActiveFirebaseConfig()?.projectId || 'banco-01-teste';
   });
 
   useEffect(() => {
@@ -1308,7 +1308,7 @@ export default function Header({
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 font-mono text-[10px] sm:text-[11px] bg-slate-50 p-2.5 sm:p-3 rounded-xl border border-slate-200">
                 <div className="min-w-0">
                   <span className="block text-[9px] font-sans uppercase tracking-wider text-slate-400 font-bold">Projeto Firebase</span>
-                  <span className="font-semibold text-slate-700 truncate block">{(getActiveFirebaseConfig()?.projectId) || 'banco-01-34be4'}</span>
+                  <span className="font-semibold text-slate-700 truncate block">{(getActiveFirebaseConfig()?.projectId) || 'banco-01-teste'}</span>
                 </div>
                 <div className="min-w-0">
                   <span className="block text-[9px] font-sans uppercase tracking-wider text-slate-400 font-bold">Banco Firestore ID</span>
