@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { User, Driver, Vehicle, Product, ActiveAsset, AuditSession, ReturnForecast, FiscalAlert, ImportedRoute, Vale } from './types';
-import { DEFAULT_PRODUCTS, DEFAULT_USERS } from './data';
+import { DEFAULT_DRIVERS, DEFAULT_PRODUCTS, DEFAULT_USERS, DEFAULT_VEHICLES } from './data';
 import { ImageDB } from './imageDb';
 import { isClientFirebaseActive, fetchDirectlyFromFirestore, saveDirectlyToFirestore, subscribeToFirestore, getClientAuthError, getIsFirestoreQuotaExceeded, setFirestoreQuotaExceeded, getActiveFirebaseConfig, switchActiveFirebaseConfig, checkAndSyncServerConfig, subscribeToSystemControl } from './clientFirebase';
 import Header from './components/Header';
@@ -14,6 +14,26 @@ import AIAgentChat from './components/AIAgentChat';
 import { DatabaseScheduleBanner } from './components/DatabaseScheduleBanner';
 import { ClipboardCheck, ShieldCheck, BarChart3, AlertCircle, Bell, CheckCircle2, Settings, RefreshCw } from 'lucide-react';
 
+// Helper to repair missing or broken product descriptions and preserve master catalog
+function repairProductsList(list: Product[]) {
+  const existing = list || [];
+  const repaired = existing.map(p => {
+    if (p.description === p.code || !p.description || p.description.trim() === '') {
+      const original = DEFAULT_PRODUCTS.find(dp => dp.code === p.code || String(dp.code) === String(p.code));
+      if (original) {
+        return { ...p, description: original.description };
+      }
+    }
+    return p;
+  });
+
+  // Ensure all master catalog products are present
+  const existingCodes = new Set(repaired.map(p => String(p.code)));
+  const missingDefaults = DEFAULT_PRODUCTS.filter(dp => !existingCodes.has(String(dp.code)));
+
+  return [...repaired, ...missingDefaults];
+}
+
 export default function App() {
   const lastWriteTime = useRef<number>(0);
   const pendingUpdatesRef = useRef<any>({});
@@ -21,9 +41,9 @@ export default function App() {
   const lastSyncAlertTime = useRef<number>(0);
   // Database states loaded from AppStore
   const [users, setUsers] = useState<User[]>(DEFAULT_USERS);
-  const [drivers, setDrivers] = useState<Driver[]>([]);
-  const [vehicles, setVehicles] = useState<Vehicle[]>([]);
-  const [products, setProducts] = useState<Product[]>([]);
+  const [drivers, setDrivers] = useState<Driver[]>(DEFAULT_DRIVERS);
+  const [vehicles, setVehicles] = useState<Vehicle[]>(DEFAULT_VEHICLES);
+  const [products, setProducts] = useState<Product[]>(() => repairProductsList([]));
   const [activeAssets, setActiveAssets] = useState<ActiveAsset[]>([]);
   const [audits, setAudits] = useState<AuditSession[]>([]);
   const [vales, setVales] = useState<Vale[]>([]);
@@ -275,20 +295,6 @@ export default function App() {
         }
       }
     }, 300);
-  };
-
-  // Helper to repair missing or broken product descriptions
-  const repairProductsList = (list: Product[]) => {
-    if (!list) return [];
-    return list.map(p => {
-      if (p.description === p.code || !p.description || p.description.trim() === '') {
-        const original = DEFAULT_PRODUCTS.find(dp => dp.code === p.code);
-        if (original) {
-          return { ...p, description: original.description };
-        }
-      }
-      return p;
-    });
   };
 
   // Normalization helper for Map Codes (strips leading zeros)

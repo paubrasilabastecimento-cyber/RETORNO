@@ -56,14 +56,80 @@ export const DEFAULT_VEHICLES: Vehicle[] = [
 
 export const DEFAULT_PRODUCTS: Product[] = [
   {
+    "code": "279",
+    "description": "BRAHMA CHOPP LONG NECK 355ML SIX-PACK CAIXA C/4",
+    "group": "CERVEJA",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.0852,
+    "cost": 0,
+    "curve": "C"
+  },
+  {
     "code": "347",
     "description": "SUKITA PET 1L CAIXA C/12",
-    "group": "MARKETPLACE",
+    "group": "NAB",
     "unit": "un",
     "palletFactor": 84,
     "skuFactor": 1,
     "hectoFactor": 0.12,
-    "cost": 30.48,
+    "cost": 29.3544,
+    "curve": "C"
+  },
+  {
+    "code": "503",
+    "description": "SUKITA PET 2L CAIXA C/6",
+    "group": "NAB",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.12,
+    "cost": 19.4514,
+    "curve": "C"
+  },
+  {
+    "code": "504",
+    "description": "PEPSI COLA PET 2L CAIXA C/6",
+    "group": "NAB",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.12,
+    "cost": 26.9727,
+    "curve": "C"
+  },
+  {
+    "code": "620",
+    "description": "CARACU LONG NECK 355ML SIX-PACK BANDEJA C/4",
+    "group": "CERVEJA",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.0852,
+    "cost": 78.1952,
+    "curve": "C"
+  },
+  {
+    "code": "772",
+    "description": "PEPSI COLA MIX BAG IN BOX 18L",
+    "group": "NAB",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.06,
+    "cost": 0,
+    "curve": "C"
+  },
+  {
+    "code": "838",
+    "description": "CHOPP BRAHMA CLARO BARRIL KEG 50L",
+    "group": "CERVEJA",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 13.4,
     "curve": "C"
   },
   {
@@ -73,8 +139,52 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "unit": "un",
     "palletFactor": 84,
     "skuFactor": 1,
-    "hectoFactor": 0.07,
-    "cost": 53.35,
+    "hectoFactor": 0.072,
+    "cost": 53.345,
+    "curve": "C"
+  },
+  {
+    "code": "988",
+    "description": "BRAHMA CHOPP 600ML",
+    "group": "CERVEJA",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.072,
+    "cost": 52.2269,
+    "curve": "C"
+  },
+  {
+    "code": "1114",
+    "description": "GUARANA CHP ANTARCTICA PET 3,3 L SH C/04",
+    "group": "NAB",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.132,
+    "cost": 27.546,
+    "curve": "C"
+  },
+  {
+    "code": "1116",
+    "description": "PEPSI COLA PET 3,3 L SH C/04",
+    "group": "NAB",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.132,
+    "cost": 28.0955,
+    "curve": "C"
+  },
+  {
+    "code": "1166",
+    "description": "SUKITA UVA PET 2L CAIXA C/6",
+    "group": "NAB",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.12,
+    "cost": 20.0878,
     "curve": "C"
   },
   {
@@ -85,18 +195,40 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "palletFactor": 84,
     "skuFactor": 1,
     "hectoFactor": 0.12,
-    "cost": 51.44,
+    "cost": 51.4415,
+    "curve": "C"
+  },
+  {
+    "code": "1695",
+    "description": "BRAHMA CHOPP GFA VD 1L COM TTC",
+    "group": "CERVEJA",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.12,
+    "cost": 59.8917,
+    "curve": "C"
+  },
+  {
+    "code": "1699",
+    "description": "STELLA ARTOIS LT 269ML CX C/8 FRIDGE PACK",
+    "group": "CERVEJA",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.02152,
+    "cost": 21.9457,
     "curve": "C"
   },
   {
     "code": "1743",
     "description": "ANTARCTICA PILSEN GFA VD 1L COM TTC",
-    "group": "MARKETPLACE",
+    "group": "CERVEJA",
     "unit": "un",
     "palletFactor": 84,
     "skuFactor": 1,
     "hectoFactor": 0.12,
-    "cost": 40.76,
+    "cost": 40.7643,
     "curve": "C"
   },
   {
@@ -106,8 +238,8 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "unit": "un",
     "palletFactor": 84,
     "skuFactor": 1,
-    "hectoFactor": 0.04,
-    "cost": 30.91,
+    "hectoFactor": 0,
+    "cost": 30.9065,
     "curve": "C"
   },
   {
@@ -122,6 +254,17 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "curve": "C"
   },
   {
+    "code": "2008",
+    "description": "ANTARCTICA SUBZERO LATA 350ML SH C/12 NPAL",
+    "group": "CERVEJA",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.042,
+    "cost": 27.0076,
+    "curve": "C"
+  },
+  {
     "code": "2319",
     "description": "GUARANA CHP ANTARCTICA PET 1L CAIXA C/12",
     "group": "NAB",
@@ -130,6 +273,17 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "skuFactor": 1,
     "hectoFactor": 0.12,
     "cost": 34.22,
+    "curve": "C"
+  },
+  {
+    "code": "2320",
+    "description": "SODA LIMONADA ANTARCTICA PET 1L CAIXA C/12",
+    "group": "CERVEJA",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.12,
+    "cost": 31.8196,
     "curve": "C"
   },
   {
@@ -144,6 +298,17 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "curve": "C"
   },
   {
+    "code": "2538",
+    "description": "ANTARCTICA PILSEN GFA VD 600ML",
+    "group": "CERVEJA",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.07,
+    "cost": 61.02,
+    "curve": "C"
+  },
+  {
     "code": "2546",
     "description": "ORIGINAL 600ML",
     "group": "MARKETPLACE",
@@ -152,6 +317,17 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "skuFactor": 1,
     "hectoFactor": 0.07,
     "cost": 61.02,
+    "curve": "C"
+  },
+  {
+    "code": "4262",
+    "description": "MICHELOB ULTRA N LT SLEEK 350ML C 8 CX CARTAO",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.03,
+    "cost": 32.83,
     "curve": "C"
   },
   {
@@ -177,6 +353,17 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "curve": "C"
   },
   {
+    "code": "7979",
+    "description": "GATORADE FRUTAS CITRICAS PET 500ML SIXPACK",
+    "group": "NAB",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.03,
+    "cost": 28.68,
+    "curve": "C"
+  },
+  {
     "code": "7980",
     "description": "GATORADE TANGERINA PET 500ML SIXPACK",
     "group": "NAB",
@@ -196,6 +383,17 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "skuFactor": 1,
     "hectoFactor": 0.09,
     "cost": 25,
+    "curve": "C"
+  },
+  {
+    "code": "9067",
+    "description": "ANTARCTICA PILSEN LT 350 ML",
+    "group": "CERVEJA",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.04,
+    "cost": 28.52,
     "curve": "C"
   },
   {
@@ -243,6 +441,17 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "curve": "C"
   },
   {
+    "code": "9084",
+    "description": "GUARANA CHP ANTARCTICA LATA 350ML SH C/12 NPAL",
+    "group": "CERVEJA",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.042,
+    "cost": 22.1225,
+    "curve": "C"
+  },
+  {
     "code": "9089",
     "description": "SUKITA LATA 350ML SH C/12 NPAL",
     "group": "MARKETPLACE",
@@ -265,6 +474,17 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "curve": "C"
   },
   {
+    "code": "9427",
+    "description": "ANTARCTICA PILSEN LT 473ML SH C/12 NPAL",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.06,
+    "cost": 45.9,
+    "curve": "C"
+  },
+  {
     "code": "9795",
     "description": "GUARANA ANTARCTICA ZERO PET 1L CAIXA C/12",
     "group": "NAB",
@@ -284,6 +504,17 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "skuFactor": 1,
     "hectoFactor": 0.12,
     "cost": 51.64,
+    "curve": "C"
+  },
+  {
+    "code": "13203",
+    "description": "ANTARCTICA PILSEN GFA VD 300ML CX C/23",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.07,
+    "cost": 53.9,
     "curve": "C"
   },
   {
@@ -595,6 +826,17 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "curve": "C"
   },
   {
+    "code": "20164",
+    "description": "SKOL LT 473ML SH C/12 NPAL MULTPACK 12",
+    "group": "CERVEJA",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.06,
+    "cost": 37.4,
+    "curve": "C"
+  },
+  {
     "code": "20217",
     "description": "ORIGINAL GFA VD 300ML CX C/23",
     "group": "MARKETPLACE",
@@ -636,6 +878,17 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "skuFactor": 1,
     "hectoFactor": 0.07,
     "cost": 64.71,
+    "curve": "C"
+  },
+  {
+    "code": "20533",
+    "description": "BRAHMA DUPLO MALTE GFA VD 1L",
+    "group": "CERVEJA",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.12,
+    "cost": 55.86,
     "curve": "C"
   },
   {
@@ -705,6 +958,39 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "curve": "C"
   },
   {
+    "code": "21526",
+    "description": "JOHNNIE WALKER RED LABEL GARRAFA VIDRO 1 L",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 74,
+    "curve": "C"
+  },
+  {
+    "code": "21527",
+    "description": "TANQUERAY GIN LONDON DRY GARRAFA VIDRO 750ML",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 79.9,
+    "curve": "C"
+  },
+  {
+    "code": "21529",
+    "description": "ABSOLUT ORIGINAL GARRAFA VIDRO 1 L",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 77.85,
+    "curve": "C"
+  },
+  {
     "code": "21530",
     "description": "SMIRNOFF ORIGINAL GARRAFA VIDRO 998ML",
     "group": "MARKETPLACE",
@@ -771,6 +1057,17 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "curve": "C"
   },
   {
+    "code": "21781",
+    "description": "SMIRNOFF ICE GARRAFA VD 275ML CX C24",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.07,
+    "cost": 154.89,
+    "curve": "C"
+  },
+  {
     "code": "21786",
     "description": "MONTILLA CARTA BRANCA GARRAFA VIDRO 1 L",
     "group": "MARKETPLACE",
@@ -793,6 +1090,28 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "curve": "C"
   },
   {
+    "code": "21788",
+    "description": "BALLANTINES FINEST GARRAFA VIDRO 1 L",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 83.39,
+    "curve": "C"
+  },
+  {
+    "code": "21792",
+    "description": "WHITE HORSE GARRAFA VIDRO 1 L",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 62.13,
+    "curve": "C"
+  },
+  {
     "code": "21955",
     "description": "CHIVAS REGAL 12 ANOS GARRAFA VIDRO 1 L",
     "group": "MARKETPLACE",
@@ -801,6 +1120,17 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "skuFactor": 1,
     "hectoFactor": 0.01,
     "cost": 144.81,
+    "curve": "C"
+  },
+  {
+    "code": "21968",
+    "description": "TRIDENT HORTELA ENVELOPE 8G CX C/21",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 34.05,
     "curve": "C"
   },
   {
@@ -823,6 +1153,39 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "skuFactor": 1,
     "hectoFactor": 0.01,
     "cost": 34.05,
+    "curve": "C"
+  },
+  {
+    "code": "22003",
+    "description": "HALLS CEREJA ENVELOPE 28G CX C/21",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 21.85,
+    "curve": "C"
+  },
+  {
+    "code": "22005",
+    "description": "HALLS MENTA ENVELOPE 28G CX C/21",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 21.85,
+    "curve": "C"
+  },
+  {
+    "code": "22007",
+    "description": "HALLS EXTRA FORTE ENVELOPE 28G CX C/21",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 21.85,
     "curve": "C"
   },
   {
@@ -903,6 +1266,72 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "curve": "C"
   },
   {
+    "code": "22382",
+    "description": "PASSPORT SELECTION GARRAFA VIDRO 1 L",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 31.79,
+    "curve": "C"
+  },
+  {
+    "code": "22543",
+    "description": "ROCKS STRAMBERRY GARRAFA VIDRO 1 L",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 24.32,
+    "curve": "C"
+  },
+  {
+    "code": "22562",
+    "description": "DOMECQ COQ. COMPOSTO GARRAFA VIDRO 1 L",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 42.19,
+    "curve": "C"
+  },
+  {
+    "code": "22813",
+    "description": "BUDWEISER LATA 310ML CX C/6 MULTPACK",
+    "group": "CERVEJA",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.02,
+    "cost": 0,
+    "curve": "C"
+  },
+  {
+    "code": "22815",
+    "description": "BRAHMA DUPLO MALTE LATA 310ML CX C/6 MULTPACK",
+    "group": "CERVEJA",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.02,
+    "cost": 0,
+    "curve": "C"
+  },
+  {
+    "code": "22819",
+    "description": "BOHEMIA LATA 310ML CX C/6 MULTPACK 06",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.02,
+    "cost": 0,
+    "curve": "C"
+  },
+  {
     "code": "22871",
     "description": "PIRAQUE ROLADINHO GOIABA PCT 75G CX C/40",
     "group": "MARKETPLACE",
@@ -911,6 +1340,39 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "skuFactor": 1,
     "hectoFactor": 0.03,
     "cost": 120.8,
+    "curve": "C"
+  },
+  {
+    "code": "23028",
+    "description": "BUCHANANS WHISKY DELUXE 12 ANOS GARRAFA VIDRO 1 L",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 180.86,
+    "curve": "C"
+  },
+  {
+    "code": "23029",
+    "description": "JOHNNIE WALKER BLACK LABEL GARRAFA VIDRO 1 L",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 122.34,
+    "curve": "C"
+  },
+  {
+    "code": "23058",
+    "description": "PIRACANJUBA DESNATADO CX 1L CX C/12",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.12,
+    "cost": 0,
     "curve": "C"
   },
   {
@@ -933,6 +1395,39 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "skuFactor": 1,
     "hectoFactor": 0.07,
     "cost": 60.57,
+    "curve": "C"
+  },
+  {
+    "code": "23193",
+    "description": "BEATS MOSCOW MULE LT 269ML CX CARTAO C/8 NPAL",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.02,
+    "cost": 0,
+    "curve": "C"
+  },
+  {
+    "code": "23194",
+    "description": "BEATS MOJITO LT 269ML CX CARTAO C/8 NPAL",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.02,
+    "cost": 0,
+    "curve": "C"
+  },
+  {
+    "code": "23246",
+    "description": "PIRACANJUBA LEITE CONDENSADO TETRAPAK 395G CX C/27",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.11,
+    "cost": 120.96,
     "curve": "C"
   },
   {
@@ -969,6 +1464,61 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "curve": "C"
   },
   {
+    "code": "23440",
+    "description": "SALINAS TRAD. CACHACA GARRAFA VIDRO 1 L",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 0,
+    "curve": "C"
+  },
+  {
+    "code": "23443",
+    "description": "PITU AGUARDENTE GARRAFA VIDRO 965ML",
+    "group": "NAB",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 9.5,
+    "curve": "C"
+  },
+  {
+    "code": "23449",
+    "description": "MIKES HARD LEMONADE N LT 269ML SH C12 NP",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.03,
+    "cost": 40,
+    "curve": "C"
+  },
+  {
+    "code": "23450",
+    "description": "MIKES HARD LEMONADE PITAIA N LT 269ML SH C12 NP",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.03,
+    "cost": 0,
+    "curve": "C"
+  },
+  {
+    "code": "23451",
+    "description": "MIKES HARD LEMONADE TANGERINA N LT 269ML SH C12 NP",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.03,
+    "cost": 0,
+    "curve": "C"
+  },
+  {
     "code": "23546",
     "description": "INDAIA AGUA MINERAL C/GAS GFA PET 500ML PACK C/12",
     "group": "NAB",
@@ -999,6 +1549,50 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "skuFactor": 1,
     "hectoFactor": 0.05,
     "cost": 31.07,
+    "curve": "C"
+  },
+  {
+    "code": "23608",
+    "description": "PIRACANJUBA LEITE EM PO INTEGRAL SACO AL. 200G FD C/50",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.1,
+    "cost": 0,
+    "curve": "C"
+  },
+  {
+    "code": "23671",
+    "description": "CERVEGELA PLASTICA BRAHMA 1 UN P/ GFA 1L CX C/3",
+    "group": "CERVEJA",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 51.77,
+    "curve": "C"
+  },
+  {
+    "code": "23672",
+    "description": "CERVEGELA PLASTICA BRAHMA 1 UN P/ GFA 600ML CX C/3",
+    "group": "CERVEJA",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 51.77,
+    "curve": "C"
+  },
+  {
+    "code": "24161",
+    "description": "S. JOAO BARRA CONHAQUE ALC. GARRAFA VIDRO 900ML",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 19.3,
     "curve": "C"
   },
   {
@@ -1068,6 +1662,83 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "curve": "C"
   },
   {
+    "code": "24410",
+    "description": "QUINTA DO MORGADO VINHO BRANCO SUAVE GFA VD 750 ML",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 16,
+    "curve": "C"
+  },
+  {
+    "code": "24411",
+    "description": "QUINTA DO MORGADO VINHO BRANCO SECO GFA VD 750 ML",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 13.77,
+    "curve": "C"
+  },
+  {
+    "code": "24479",
+    "description": "BOHEMIA LONG NECK 330ML SIX-PACK SHRINK C/4",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.08,
+    "cost": 78.42,
+    "curve": "C"
+  },
+  {
+    "code": "24486",
+    "description": "GALLO AZEITE OLIVA EX. VIR. GFA VDR 500ML",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 29.97,
+    "curve": "C"
+  },
+  {
+    "code": "24488",
+    "description": "GALLO AZEITE OLIVA EX. VIR. GFA VDR 250ML",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 17.21,
+    "curve": "C"
+  },
+  {
+    "code": "24604",
+    "description": "MINALBA AGUA PREMIUM C/GAS GFA VDR 300ML CX/12",
+    "group": "NAB",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.04,
+    "cost": 56.7,
+    "curve": "C"
+  },
+  {
+    "code": "24609",
+    "description": "MINALBA AGUA PREMIUM S/GAS GFA VDR 300ML CX/12",
+    "group": "NAB",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.04,
+    "cost": 49,
+    "curve": "C"
+  },
+  {
     "code": "25151",
     "description": "OLD PARR WHISKY GFA VDR 1L",
     "group": "MARKETPLACE",
@@ -1090,6 +1761,28 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "curve": "C"
   },
   {
+    "code": "25174",
+    "description": "51 ICE BALADA GARRAFA VD 275ML CX C24",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.07,
+    "cost": 116,
+    "curve": "C"
+  },
+  {
+    "code": "25178",
+    "description": "51 ICE LIMAO GARRAFA VD 275ML CX C24",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.07,
+    "cost": 100.48,
+    "curve": "C"
+  },
+  {
     "code": "25194",
     "description": "CACHACA 51 LT 350ML CX C/12",
     "group": "MARKETPLACE",
@@ -1098,6 +1791,105 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "skuFactor": 1,
     "hectoFactor": 0.04,
     "cost": 29.82,
+    "curve": "C"
+  },
+  {
+    "code": "25220",
+    "description": "CACHACA 51 PIRASS OURO DESCARTAVEL GFA DE VDRO 965ML",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 12.3,
+    "curve": "C"
+  },
+  {
+    "code": "25303",
+    "description": "GARRAFEIRA PL. PRETO BEES 1 UN P/24 GFA 600ML",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.02,
+    "cost": 31.16,
+    "curve": "C"
+  },
+  {
+    "code": "25329",
+    "description": "SALTON ESPUMANTE BRUT GFA VD 750 ML",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 40.18,
+    "curve": "C"
+  },
+  {
+    "code": "25335",
+    "description": "SALTON ESPUMANTE BRUT ROSE GFA VD 750 ML",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 40.18,
+    "curve": "C"
+  },
+  {
+    "code": "25347",
+    "description": "SALTON ESPUMANTE CLASSIC MOSCATEL GFA VD 750 ML",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 40.18,
+    "curve": "C"
+  },
+  {
+    "code": "25429",
+    "description": "MATUTA CACHACA CRISTAL GARRAFA VIDRO 1 L",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 21.92,
+    "curve": "C"
+  },
+  {
+    "code": "25430",
+    "description": "MATUTA CACHACA UMBURANA GARRAFA VIDRO 1 L",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 25.28,
+    "curve": "C"
+  },
+  {
+    "code": "25433",
+    "description": "MATUTA CACHACA COCO GARRAFA VIDRO 1 L",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 0,
+    "curve": "C"
+  },
+  {
+    "code": "25434",
+    "description": "MATUTA CACHACA MEL E LIMAO GARRAFA VIDRO 1 L",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 42.8,
     "curve": "C"
   },
   {
@@ -1156,6 +1948,39 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "curve": "C"
   },
   {
+    "code": "26607",
+    "description": "RED BULL PITAYA LATA 250ML FOUR PACK NPAL",
+    "group": "NAB",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 25.01,
+    "curve": "C"
+  },
+  {
+    "code": "26994",
+    "description": "SMIRNOFF ORIGINAL GFA VDR 600ML",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 0,
+    "curve": "C"
+  },
+  {
+    "code": "27177",
+    "description": "HALLS MENTOL ENVELOPE 28G CX C/21",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 21.85,
+    "curve": "C"
+  },
+  {
     "code": "27522",
     "description": "CACHACA 51 PIRASSUNUNGA GFA VD 965ML RET CX/12",
     "group": "MARKETPLACE",
@@ -1178,6 +2003,72 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "curve": "C"
   },
   {
+    "code": "27560",
+    "description": "CASILLERO DEL DIABLO VINH RESERVA MALBEC GFA VD 750 ML",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 51.57,
+    "curve": "C"
+  },
+  {
+    "code": "27562",
+    "description": "CASILLERO DEL DIABLO VINH RESERVA MERLOT GFA VD 750 ML",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 51.57,
+    "curve": "C"
+  },
+  {
+    "code": "27566",
+    "description": "RESERVADO VINHO SWEET RED GFA VD 750 ML",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 28.81,
+    "curve": "C"
+  },
+  {
+    "code": "27613",
+    "description": "CASILLERO DEL DIABLO VNH RSV CABER SAUVG GFA VD 750 ML",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 51.57,
+    "curve": "C"
+  },
+  {
+    "code": "27686",
+    "description": "MIKES HARD LEMONADE N LONG NECK 275ML SIX PACK SH C/4",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.07,
+    "cost": 126.46,
+    "curve": "C"
+  },
+  {
+    "code": "27704",
+    "description": "MIKES HARD LEMONADE PITAIA N LONG NECK 275ML SIX PACK SH C/4",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.07,
+    "cost": 126.76,
+    "curve": "C"
+  },
+  {
     "code": "27866",
     "description": "CORONA CERO SUNBREW N LONG NECK 330 ML SP BASKET CX C4",
     "group": "MARKETPLACE",
@@ -1189,6 +2080,50 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "curve": "C"
   },
   {
+    "code": "28137",
+    "description": "SKOL BEATS CAIPIRINHA LT 269ML CX CARTAO C/8 NPAL",
+    "group": "CERVEJA",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.02,
+    "cost": 32.58,
+    "curve": "C"
+  },
+  {
+    "code": "28202",
+    "description": "BUBBALOO TUTTI FRUTTI DISPLAY 300G",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 0,
+    "curve": "C"
+  },
+  {
+    "code": "28203",
+    "description": "BUBBALOO MORANGO DISPLAY 300G",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 11.31,
+    "curve": "C"
+  },
+  {
+    "code": "28204",
+    "description": "BUBBALOO UVA DISPLAY 300G",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 10.99,
+    "curve": "C"
+  },
+  {
     "code": "29197",
     "description": "TANG REFRESCO EM PO LIMAO PCT 18G DP C/18",
     "group": "MARKETPLACE",
@@ -1197,6 +2132,17 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "skuFactor": 1,
     "hectoFactor": 0.01,
     "cost": 13.38,
+    "curve": "C"
+  },
+  {
+    "code": "29199",
+    "description": "TANG REFRESCO EM PO LARANJA PCT 18G DP C/18",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 13.37,
     "curve": "C"
   },
   {
@@ -1222,6 +2168,28 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "curve": "C"
   },
   {
+    "code": "29209",
+    "description": "TANG REFRESCO EM PO MARACUJA PCT 18G DP C/18",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 13.37,
+    "curve": "C"
+  },
+  {
+    "code": "29215",
+    "description": "TANG REFRESCO EM PO UVA PCT 18G DP C/18",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 13.37,
+    "curve": "C"
+  },
+  {
     "code": "29253",
     "description": "ORIGINAL GFA VD 1L",
     "group": "MARKETPLACE",
@@ -1230,6 +2198,39 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "skuFactor": 1,
     "hectoFactor": 0.12,
     "cost": 62.85,
+    "curve": "C"
+  },
+  {
+    "code": "29323",
+    "description": "INDAIA BEB MISTA CITRUS LARANJA GFA PET 330ML FD C/12",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.04,
+    "cost": 0,
+    "curve": "C"
+  },
+  {
+    "code": "29416",
+    "description": "CERVEGELA BUDWEISER 1 UN P/ GF 600ML CX3",
+    "group": "CERVEJA",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.02,
+    "cost": 51.77,
+    "curve": "C"
+  },
+  {
+    "code": "29418",
+    "description": "CERVEGELA BUDWEISER LITRAO 1 UN P/ GF 1L PACK C3",
+    "group": "CERVEJA",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.03,
+    "cost": 51.77,
     "curve": "C"
   },
   {
@@ -1244,6 +2245,39 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "curve": "C"
   },
   {
+    "code": "29504",
+    "description": "OLD PARR WHISKY 12 ANOS GFA VD 750 ML",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 98.9,
+    "curve": "C"
+  },
+  {
+    "code": "29505",
+    "description": "CIROC VODKA GFA VD 750 ML",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 162.39,
+    "curve": "C"
+  },
+  {
+    "code": "29508",
+    "description": "JOHNNIE WALKER WHISKY GOLD LABEL RESERVE GFA VD 750 ML",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 201.64,
+    "curve": "C"
+  },
+  {
     "code": "29580",
     "description": "STELLA ARTOIS PURE GOLD LONG NECK 330ML SP SH C/4",
     "group": "CERVEJA",
@@ -1255,6 +2289,17 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "curve": "C"
   },
   {
+    "code": "29733",
+    "description": "HALLS MELANCIA ENVELOPE 28G CX C/21",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 19.97,
+    "curve": "C"
+  },
+  {
     "code": "29845",
     "description": "PEPSI BLACK PET 1 L SH C/12",
     "group": "NAB",
@@ -1263,6 +2308,28 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "skuFactor": 1,
     "hectoFactor": 0.12,
     "cost": 34.44,
+    "curve": "C"
+  },
+  {
+    "code": "29891",
+    "description": "ROCKS DRY GIN GARRAFA VIDRO 1 L",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 24.32,
+    "curve": "C"
+  },
+  {
+    "code": "29926",
+    "description": "JOHNNIE  WALKER BLACK LABEL WHISKY ICONS GARRAFA VIDRO 1 L",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 177.42,
     "curve": "C"
   },
   {
@@ -1307,6 +2374,17 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "skuFactor": 1,
     "hectoFactor": 0.04,
     "cost": 53.28,
+    "curve": "C"
+  },
+  {
+    "code": "30856",
+    "description": "BUBBALOO BALA MORANGO DISPLAY 15G CX/12",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 0,
     "curve": "C"
   },
   {
@@ -1376,6 +2454,61 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "curve": "C"
   },
   {
+    "code": "31674",
+    "description": "YPE AMACIANTE INTENSO FRASCO PLASTICO 2 L CX6",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.12,
+    "cost": 47.68,
+    "curve": "C"
+  },
+  {
+    "code": "31678",
+    "description": "YPE AMACIANTE CONC BLUE GARDEN FRASCO PLAST 1 L CX12",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.12,
+    "cost": 166,
+    "curve": "C"
+  },
+  {
+    "code": "31708",
+    "description": "YPE AMACIANTE CONC BLUE GARDEN FRASCO PLAST 500ML CX/12",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.06,
+    "cost": 83.8,
+    "curve": "C"
+  },
+  {
+    "code": "31713",
+    "description": "YPE AMACIANTE CONC PINK FRASCO PLAST 500ML CX/12",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.06,
+    "cost": 86.21,
+    "curve": "C"
+  },
+  {
+    "code": "31795",
+    "description": "BRUTAL FRUIT LONG NECK 275ML SIX PACK SH C 2",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.03,
+    "cost": 103.8,
+    "curve": "C"
+  },
+  {
     "code": "32036",
     "description": "PIRAQUE MAIZENA PCT PLAST 175G C48",
     "group": "MARKETPLACE",
@@ -1395,6 +2528,50 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "skuFactor": 1,
     "hectoFactor": 0.03,
     "cost": 22.72,
+    "curve": "C"
+  },
+  {
+    "code": "32122",
+    "description": "SMIRNOFF VODKA N21 GFA PET 1,75L",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.02,
+    "cost": 0,
+    "curve": "C"
+  },
+  {
+    "code": "32126",
+    "description": "AMINDUS GRELHADITOS AMEND. TOR. S/ PELE PCT 24G FD C/60",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 26.53,
+    "curve": "C"
+  },
+  {
+    "code": "32175",
+    "description": "CROKISSIMO AMEND CROC LEV SALGADO PCT 24G FD/36",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 127.38,
+    "curve": "C"
+  },
+  {
+    "code": "32349",
+    "description": "BEATS TROPICAL LT 269ML CX CARTAO C/8 NPAL",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.02,
+    "cost": 32.12,
     "curve": "C"
   },
   {
@@ -1464,6 +2641,17 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "curve": "C"
   },
   {
+    "code": "32538",
+    "description": "PERGOLA SEL. VINHO TINTO SUAVE GARRAFA VIDRO 1 L",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 21.5,
+    "curve": "C"
+  },
+  {
     "code": "32644",
     "description": "BUBBALOO UVA DISPLAY 5G CX/60",
     "group": "MARKETPLACE",
@@ -1483,6 +2671,28 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "skuFactor": 1,
     "hectoFactor": 0.01,
     "cost": 12.44,
+    "curve": "C"
+  },
+  {
+    "code": "32648",
+    "description": "BUBBALOO MORANGO DISPLAY 5G CX/60",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 12.44,
+    "curve": "C"
+  },
+  {
+    "code": "32969",
+    "description": "RED BULL SUMMER MORANGO E PESSEGO LATA 250ML FOUR PACK NPAL",
+    "group": "NAB",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 31.96,
     "curve": "C"
   },
   {
@@ -1541,6 +2751,17 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "curve": "C"
   },
   {
+    "code": "33109",
+    "description": "51 OURO AGUARDENTE COMPOSTA LT 350ML CX C/12",
+    "group": "NAB",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.04,
+    "cost": 50.02,
+    "curve": "C"
+  },
+  {
     "code": "33734",
     "description": "BEATS RED MIX LT 269ML SH C/8",
     "group": "MARKETPLACE",
@@ -1563,6 +2784,17 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "curve": "C"
   },
   {
+    "code": "33818",
+    "description": "ORIGINAL LATA 350ML SHRINK C/12 MULTPACK",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.04,
+    "cost": 37.58,
+    "curve": "C"
+  },
+  {
     "code": "33820",
     "description": "BRAHMA CHOPP LATA 350ML SH C/12 NPAL MULTIPACK .",
     "group": "CERVEJA",
@@ -1571,6 +2803,39 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "skuFactor": 1,
     "hectoFactor": 0.04,
     "cost": 34.9,
+    "curve": "C"
+  },
+  {
+    "code": "33854",
+    "description": "YPE TIXAN LAVA ROUPAS LIQ PRIMAVERA FRASCO PLAST 1L",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 120.6,
+    "curve": "C"
+  },
+  {
+    "code": "33857",
+    "description": "STELLA ARTOIS PURE GOLD 600ML",
+    "group": "CERVEJA",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.07,
+    "cost": 108,
+    "curve": "C"
+  },
+  {
+    "code": "34027",
+    "description": "GUARANA CHP ANTARCTICA LATA 350ML SH C/12 NPAL MULTIPACK",
+    "group": "NAB",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.04,
+    "cost": 30.48,
     "curve": "C"
   },
   {
@@ -1607,534 +2872,6 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "curve": "C"
   },
   {
-    "code": "34410",
-    "description": "HALLS UVA VERDE ENVELOPE 28G CX C/21",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 30.9,
-    "curve": "C"
-  },
-  {
-    "code": "34608",
-    "description": "SKOL LATA 350ML SH C/12 NPAL MULTIPACK",
-    "group": "CERVEJA",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.04,
-    "cost": 39,
-    "curve": "C"
-  },
-  {
-    "code": "35003",
-    "description": "TRIDENT XFRESH 5S PRETO CEREJA ENVELOPE 8G CX C/21",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 34.04,
-    "curve": "C"
-  },
-  {
-    "code": "22562",
-    "description": "DOMECQ COQ. COMPOSTO GARRAFA VIDRO 1 L",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 42.19,
-    "curve": "C"
-  },
-  {
-    "code": "22813",
-    "description": "BUDWEISER LATA 310ML CX C/6 MULTPACK",
-    "group": "CERVEJA",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.02,
-    "cost": 0,
-    "curve": "C"
-  },
-  {
-    "code": "22815",
-    "description": "BRAHMA DUPLO MALTE LATA 310ML CX C/6 MULTPACK",
-    "group": "CERVEJA",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.02,
-    "cost": 0,
-    "curve": "C"
-  },
-  {
-    "code": "22819",
-    "description": "BOHEMIA LATA 310ML CX C/6 MULTPACK 06",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.02,
-    "cost": 0,
-    "curve": "C"
-  },
-  {
-    "code": "23058",
-    "description": "PIRACANJUBA DESNATADO CX 1L CX C/12",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.12,
-    "cost": 0,
-    "curve": "C"
-  },
-  {
-    "code": "23193",
-    "description": "BEATS MOSCOW MULE LT 269ML CX CARTAO C/8 NPAL",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.02,
-    "cost": 0,
-    "curve": "C"
-  },
-  {
-    "code": "23194",
-    "description": "BEATS MOJITO LT 269ML CX CARTAO C/8 NPAL",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.02,
-    "cost": 0,
-    "curve": "C"
-  },
-  {
-    "code": "23246",
-    "description": "PIRACANJUBA LEITE CONDENSADO TETRAPAK 395G CX C/27",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.11,
-    "cost": 120.96,
-    "curve": "C"
-  },
-  {
-    "code": "23440",
-    "description": "SALINAS TRAD. CACHACA GARRAFA VIDRO 1 L",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 0,
-    "curve": "C"
-  },
-  {
-    "code": "23443",
-    "description": "PITU AGUARDENTE GARRAFA VIDRO 965ML",
-    "group": "NAB",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 9.5,
-    "curve": "C"
-  },
-  {
-    "code": "23449",
-    "description": "MIKES HARD LEMONADE N LT 269ML SH C12 NP",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.03,
-    "cost": 40,
-    "curve": "C"
-  },
-  {
-    "code": "23450",
-    "description": "MIKES HARD LEMONADE PITAIA N LT 269ML SH C12 NP",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.03,
-    "cost": 0,
-    "curve": "C"
-  },
-  {
-    "code": "23451",
-    "description": "MIKES HARD LEMONADE TANGERINA N LT 269ML SH C12 NP",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.03,
-    "cost": 0,
-    "curve": "C"
-  },
-  {
-    "code": "23608",
-    "description": "PIRACANJUBA LEITE EM PO INTEGRAL SACO AL. 200G FD C/50",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.1,
-    "cost": 0,
-    "curve": "C"
-  },
-  {
-    "code": "24479",
-    "description": "BOHEMIA LONG NECK 330ML SIX-PACK SHRINK C/4",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.08,
-    "cost": 78.42,
-    "curve": "C"
-  },
-  {
-    "code": "25178",
-    "description": "51 ICE LIMAO GARRAFA VD 275ML CX C24",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.07,
-    "cost": 100.48,
-    "curve": "C"
-  },
-  {
-    "code": "27177",
-    "description": "HALLS MENTOL ENVELOPE 28G CX C/21",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 21.85,
-    "curve": "C"
-  },
-  {
-    "code": "27686",
-    "description": "MIKES HARD LEMONADE N LONG NECK 275ML SIX PACK SH C/4",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.07,
-    "cost": 126.46,
-    "curve": "C"
-  },
-  {
-    "code": "27704",
-    "description": "MIKES HARD LEMONADE PITAIA N LONG NECK 275ML SIX PACK SH C/4",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.07,
-    "cost": 126.76,
-    "curve": "C"
-  },
-  {
-    "code": "28137",
-    "description": "SKOL BEATS CAIPIRINHA LT 269ML CX CARTAO C/8 NPAL",
-    "group": "CERVEJA",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.02,
-    "cost": 32.58,
-    "curve": "C"
-  },
-  {
-    "code": "28202",
-    "description": "BUBBALOO TUTTI FRUTTI DISPLAY 300G",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 0,
-    "curve": "C"
-  },
-  {
-    "code": "28203",
-    "description": "BUBBALOO MORANGO DISPLAY 300G",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 11.31,
-    "curve": "C"
-  },
-  {
-    "code": "28204",
-    "description": "BUBBALOO UVA DISPLAY 300G",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 10.99,
-    "curve": "C"
-  },
-  {
-    "code": "29199",
-    "description": "TANG REFRESCO EM PO LARANJA PCT 18G DP C/18",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 13.37,
-    "curve": "C"
-  },
-  {
-    "code": "29209",
-    "description": "TANG REFRESCO EM PO MARACUJA PCT 18G DP C/18",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 13.37,
-    "curve": "C"
-  },
-  {
-    "code": "29215",
-    "description": "TANG REFRESCO EM PO UVA PCT 18G DP C/18",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 13.37,
-    "curve": "C"
-  },
-  {
-    "code": "29323",
-    "description": "INDAIA BEB MISTA CITRUS LARANJA GFA PET 330ML FD C/12",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.04,
-    "cost": 0,
-    "curve": "C"
-  },
-  {
-    "code": "25220",
-    "description": "CACHACA 51 PIRASS OURO DESCARTAVEL GFA DE VDRO 965ML",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 12.3,
-    "curve": "C"
-  },
-  {
-    "code": "23028",
-    "description": "BUCHANANS WHISKY DELUXE 12 ANOS GARRAFA VIDRO 1 L",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 180.86,
-    "curve": "C"
-  },
-  {
-    "code": "21526",
-    "description": "JOHNNIE WALKER RED LABEL GARRAFA VIDRO 1 L",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 74,
-    "curve": "C"
-  },
-  {
-    "code": "26607",
-    "description": "RED BULL PITAYA LATA 250ML FOUR PACK NPAL",
-    "group": "NAB",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 25.01,
-    "curve": "C"
-  },
-  {
-    "code": "21792",
-    "description": "WHITE HORSE GARRAFA VIDRO 1 L",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 62.13,
-    "curve": "C"
-  },
-  {
-    "code": "23029",
-    "description": "JOHNNIE WALKER BLACK LABEL GARRAFA VIDRO 1 L",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 122.34,
-    "curve": "C"
-  },
-  {
-    "code": "26994",
-    "description": "SMIRNOFF ORIGINAL GFA VDR 600ML",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 0,
-    "curve": "C"
-  },
-  {
-    "code": "32122",
-    "description": "SMIRNOFF VODKA N21 GFA PET 1,75L",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.02,
-    "cost": 0,
-    "curve": "C"
-  },
-  {
-    "code": "21788",
-    "description": "BALLANTINES FINEST GARRAFA VIDRO 1 L",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 83.39,
-    "curve": "C"
-  },
-  {
-    "code": "32349",
-    "description": "BEATS TROPICAL LT 269ML CX CARTAO C/8 NPAL",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.02,
-    "cost": 32.12,
-    "curve": "C"
-  },
-  {
-    "code": "21781",
-    "description": "SMIRNOFF ICE GARRAFA VD 275ML CX C24",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.07,
-    "cost": 154.89,
-    "curve": "C"
-  },
-  {
-    "code": "33109",
-    "description": "51 OURO AGUARDENTE COMPOSTA LT 350ML CX C/12",
-    "group": "NAB",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.04,
-    "cost": 50.02,
-    "curve": "C"
-  },
-  {
-    "code": "30856",
-    "description": "BUBBALOO BALA MORANGO DISPLAY 15G CX/12",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 0,
-    "curve": "C"
-  },
-  {
-    "code": "22003",
-    "description": "HALLS CEREJA ENVELOPE 28G CX C/21",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 21.85,
-    "curve": "C"
-  },
-  {
-    "code": "21529",
-    "description": "ABSOLUT ORIGINAL GARRAFA VIDRO 1 L",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 77.85,
-    "curve": "C"
-  },
-  {
-    "code": "9427",
-    "description": "ANTARCTICA PILSEN LT 473ML SH C/12 NPAL",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.06,
-    "cost": 45.9,
-    "curve": "C"
-  },
-  {
-    "code": "20164",
-    "description": "SKOL LT 473ML SH C/12 NPAL MULTPACK 12",
-    "group": "CERVEJA",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.06,
-    "cost": 37.4,
-    "curve": "C"
-  },
-  {
-    "code": "34027",
-    "description": "GUARANA CHP ANTARCTICA LATA 350ML SH C/12 NPAL MULTIPACK",
-    "group": "NAB",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.04,
-    "cost": 30.48,
-    "curve": "C"
-  },
-  {
     "code": "34320",
     "description": "GUARANA ANTARCTICA ZERO LATA 350ML SH C/12 NPAL MULTIPACK",
     "group": "NAB",
@@ -2146,6 +2883,39 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "curve": "C"
   },
   {
+    "code": "34325",
+    "description": "ELEVE AGUA MIN C GAS GFA PET 510ML FD C/12",
+    "group": "NAB",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.06,
+    "cost": 17.9,
+    "curve": "C"
+  },
+  {
+    "code": "34410",
+    "description": "HALLS UVA VERDE ENVELOPE 28G CX C/21",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 30.9,
+    "curve": "C"
+  },
+  {
+    "code": "34420",
+    "description": "RED BULL SUMMER MARACUJA E MELAO LATA 250ML FOUR PACK NPAL",
+    "group": "NAB",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 29.16,
+    "curve": "C"
+  },
+  {
     "code": "34429",
     "description": "RED BULL SUGAR FREE AMORA LATA 250ML FOUR PACK NPAL",
     "group": "NAB",
@@ -2154,6 +2924,17 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "skuFactor": 1,
     "hectoFactor": 0.01,
     "cost": 31.96,
+    "curve": "C"
+  },
+  {
+    "code": "34432",
+    "description": "RED BULL TROPICAL BR LATA 473ML CX C 12",
+    "group": "NAB",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.06,
+    "cost": 140.44,
     "curve": "C"
   },
   {
@@ -2179,6 +2960,39 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "curve": "C"
   },
   {
+    "code": "34479",
+    "description": "ELEVE AGUA MIN S GAS PET 1,5 SHRINK C/6",
+    "group": "NAB",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.09,
+    "cost": 13.42,
+    "curve": "C"
+  },
+  {
+    "code": "34608",
+    "description": "SKOL LATA 350ML SH C/12 NPAL MULTIPACK",
+    "group": "CERVEJA",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.04,
+    "cost": 39,
+    "curve": "C"
+  },
+  {
+    "code": "34770",
+    "description": "RED BULL SUGAR FREE POMELO LATA 250ML FOUR PACK NPAL",
+    "group": "NAB",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 31.96,
+    "curve": "C"
+  },
+  {
     "code": "34918",
     "description": "DIAS DAVILA AGUA MIN S GAS PET 500ML PACK C/12",
     "group": "NAB",
@@ -2201,388 +3015,25 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "curve": "C"
   },
   {
-    "code": "35331",
-    "description": "BUDWEISER GFA VD 1L",
-    "group": "CERVEJA",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.12,
-    "cost": 65.61,
-    "curve": "C"
-  },
-  {
-    "code": "35617",
-    "description": "BEATS GREEN MIX LT 269ML SH C/8",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.02,
-    "cost": 38.71,
-    "curve": "C"
-  },
-  {
-    "code": "36034",
-    "description": "BUDWEISER LT 473ML SH C12 NP MULTIPACK",
-    "group": "CERVEJA",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.06,
-    "cost": 64.88,
-    "curve": "C"
-  },
-  {
-    "code": "33818",
-    "description": "ORIGINAL LATA 350ML SHRINK C/12 MULTPACK",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.04,
-    "cost": 37.58,
-    "curve": "C"
-  },
-  {
-    "code": "37450",
-    "description": "BUDWEISER LT SLEEK 350ML SH C 12 MULTIPACK",
-    "group": "CERVEJA",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.04,
-    "cost": 41.69,
-    "curve": "C"
-  },
-  {
-    "code": "34479",
-    "description": "ELEVE AGUA MIN S GAS PET 1,5 SHRINK C/6",
-    "group": "NAB",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.09,
-    "cost": 13.42,
-    "curve": "C"
-  },
-  {
-    "code": "34325",
-    "description": "ELEVE AGUA MIN C GAS GFA PET 510ML FD C/12",
+    "code": "34923",
+    "description": "DIAS DAVILA AGUA MINERAL C GAS GFA PET 500ML PACK C/12",
     "group": "NAB",
     "unit": "un",
     "palletFactor": 84,
     "skuFactor": 1,
     "hectoFactor": 0.06,
-    "cost": 17.9,
+    "cost": 19.59,
     "curve": "C"
   },
   {
-    "code": "33857",
-    "description": "STELLA ARTOIS PURE GOLD 600ML",
-    "group": "CERVEJA",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.07,
-    "cost": 108,
-    "curve": "C"
-  },
-  {
-    "code": "29508",
-    "description": "JOHNNIE WALKER WHISKY GOLD LABEL RESERVE GFA VD 750 ML",
+    "code": "35003",
+    "description": "TRIDENT XFRESH 5S PRETO CEREJA ENVELOPE 8G CX C/21",
     "group": "MARKETPLACE",
     "unit": "un",
     "palletFactor": 84,
     "skuFactor": 1,
     "hectoFactor": 0.01,
-    "cost": 201.64,
-    "curve": "C"
-  },
-  {
-    "code": "31678",
-    "description": "YPE AMACIANTE CONC BLUE GARDEN FRASCO PLAST 1 L CX12",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.12,
-    "cost": 166,
-    "curve": "C"
-  },
-  {
-    "code": "35620",
-    "description": "BEATS GREEN MIX LONG NECK 269ML SIX-PACK SH C/4",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.06,
-    "cost": 135,
-    "curve": "C"
-  },
-  {
-    "code": "32175",
-    "description": "CROKISSIMO AMEND CROC LEV SALGADO PCT 24G FD/36",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 127.38,
-    "curve": "C"
-  },
-  {
-    "code": "25174",
-    "description": "51 ICE BALADA GARRAFA VD 275ML CX C24",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.07,
-    "cost": 116,
-    "curve": "C"
-  },
-  {
-    "code": "31795",
-    "description": "BRUTAL FRUIT LONG NECK 275ML SIX PACK SH C 2",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.03,
-    "cost": 103.8,
-    "curve": "C"
-  },
-  {
-    "code": "31708",
-    "description": "YPE AMACIANTE CONC BLUE GARDEN FRASCO PLAST 500ML CX/12",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.06,
-    "cost": 83.8,
-    "curve": "C"
-  },
-  {
-    "code": "35338",
-    "description": "BUDWEISER ZERO LT 473ML SH C/12 NPAL",
-    "group": "CERVEJA",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.06,
-    "cost": 55.9,
-    "curve": "C"
-  },
-  {
-    "code": "20533",
-    "description": "BRAHMA DUPLO MALTE GFA VD 1L",
-    "group": "CERVEJA",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.12,
-    "cost": 55.86,
-    "curve": "C"
-  },
-  {
-    "code": "35980",
-    "description": "CASAL GARCIA VINHO ROSE GFA VD 750 ML",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 53.49,
-    "curve": "C"
-  },
-  {
-    "code": "35108",
-    "description": "CERVEGELA PLASTICA SPATEN 1 UN P/ GFA 600ML CX3",
-    "group": "CERVEJA",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 51.77,
-    "curve": "C"
-  },
-  {
-    "code": "27613",
-    "description": "CASILLERO DEL DIABLO VNH RSV CABER SAUVG GFA VD 750 ML",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 51.57,
-    "curve": "C"
-  },
-  {
-    "code": "35992",
-    "description": "CASAL GARCIA VINHO BR VERDE GFA VD 750 ML",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 51,
-    "curve": "C"
-  },
-  {
-    "code": "31674",
-    "description": "YPE AMACIANTE INTENSO FRASCO PLASTICO 2 L CX6",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.12,
-    "cost": 47.68,
-    "curve": "C"
-  },
-  {
-    "code": "25434",
-    "description": "MATUTA CACHACA MEL E LIMAO GARRAFA VIDRO 1 L",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 42.8,
-    "curve": "C"
-  },
-  {
-    "code": "25329",
-    "description": "SALTON ESPUMANTE BRUT GFA VD 750 ML",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 40.18,
-    "curve": "C"
-  },
-  {
-    "code": "21968",
-    "description": "TRIDENT HORTELA ENVELOPE 8G CX C/21",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 34.05,
-    "curve": "C"
-  },
-  {
-    "code": "7979",
-    "description": "GATORADE FRUTAS CITRICAS PET 500ML SIXPACK",
-    "group": "NAB",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.03,
-    "cost": 28.68,
-    "curve": "C"
-  },
-  {
-    "code": "29891",
-    "description": "ROCKS DRY GIN GARRAFA VIDRO 1 L",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 24.32,
-    "curve": "C"
-  },
-  {
-    "code": "22543",
-    "description": "ROCKS STRAMBERRY GARRAFA VIDRO 1 L",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 24.32,
-    "curve": "C"
-  },
-  {
-    "code": "1699",
-    "description": "STELLA ARTOIS LT 269ML CX C/8 FRIDGE PACK",
-    "group": "CERVEJA",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.02,
-    "cost": 21.95,
-    "curve": "C"
-  },
-  {
-    "code": "22005",
-    "description": "HALLS MENTA ENVELOPE 28G CX C/21",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 21.85,
-    "curve": "C"
-  },
-  {
-    "code": "22007",
-    "description": "HALLS EXTRA FORTE ENVELOPE 28G CX C/21",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 21.85,
-    "curve": "C"
-  },
-  {
-    "code": "29733",
-    "description": "HALLS MELANCIA ENVELOPE 28G CX C/21",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 19.97,
-    "curve": "C"
-  },
-  {
-    "code": "24161",
-    "description": "S. JOAO BARRA CONHAQUE ALC. GARRAFA VIDRO 900ML",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 19.3,
-    "curve": "C"
-  },
-  {
-    "code": "24488",
-    "description": "GALLO AZEITE OLIVA EX. VIR. GFA VDR 250ML",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 17.21,
-    "curve": "C"
-  },
-  {
-    "code": "24410",
-    "description": "QUINTA DO MORGADO VINHO BRANCO SUAVE GFA VD 750 ML",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 16,
+    "cost": 34.04,
     "curve": "C"
   },
   {
@@ -2597,14 +3048,25 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "curve": "C"
   },
   {
-    "code": "24411",
-    "description": "QUINTA DO MORGADO VINHO BRANCO SECO GFA VD 750 ML",
+    "code": "35108",
+    "description": "CERVEGELA PLASTICA SPATEN 1 UN P/ GFA 600ML CX3",
+    "group": "CERVEJA",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.01,
+    "cost": 51.77,
+    "curve": "C"
+  },
+  {
+    "code": "35134",
+    "description": "YPE SABAO BARRA NEUTRO PCT PLAST 800G",
     "group": "MARKETPLACE",
     "unit": "un",
     "palletFactor": 84,
     "skuFactor": 1,
     "hectoFactor": 0.01,
-    "cost": 13.77,
+    "cost": 8.95,
     "curve": "C"
   },
   {
@@ -2619,355 +3081,91 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "curve": "C"
   },
   {
-    "code": "4262",
-    "description": "MICHELOB ULTRA N LT SLEEK 350ML C 8 CX CARTAO",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.03,
-    "cost": 32.83,
-    "curve": "C"
-  },
-  {
-    "code": "13203",
-    "description": "ANTARCTICA PILSEN GFA VD 300ML CX C/23",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.07,
-    "cost": 53.9,
-    "curve": "C"
-  },
-  {
-    "code": "21527",
-    "description": "TANQUERAY GIN LONDON DRY GARRAFA VIDRO 750ML",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 79.9,
-    "curve": "C"
-  },
-  {
-    "code": "22382",
-    "description": "PASSPORT SELECTION GARRAFA VIDRO 1 L",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 31.79,
-    "curve": "C"
-  },
-  {
-    "code": "23671",
-    "description": "CERVEGELA PLASTICA BRAHMA 1 UN P/ GFA 1L CX C/3",
+    "code": "35331",
+    "description": "BUDWEISER GFA VD 1L",
     "group": "CERVEJA",
     "unit": "un",
     "palletFactor": 84,
     "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 51.77,
+    "hectoFactor": 0.12,
+    "cost": 65.61,
     "curve": "C"
   },
   {
-    "code": "23672",
-    "description": "CERVEGELA PLASTICA BRAHMA 1 UN P/ GFA 600ML CX C/3",
+    "code": "35338",
+    "description": "BUDWEISER ZERO LT 473ML SH C/12 NPAL",
     "group": "CERVEJA",
     "unit": "un",
     "palletFactor": 84,
     "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 51.77,
+    "hectoFactor": 0.06,
+    "cost": 55.9,
     "curve": "C"
   },
   {
-    "code": "24486",
-    "description": "GALLO AZEITE OLIVA EX. VIR. GFA VDR 500ML",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 29.97,
-    "curve": "C"
-  },
-  {
-    "code": "24604",
-    "description": "MINALBA AGUA PREMIUM C/GAS GFA VDR 300ML CX/12",
-    "group": "NAB",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.04,
-    "cost": 56.7,
-    "curve": "C"
-  },
-  {
-    "code": "24609",
-    "description": "MINALBA AGUA PREMIUM S/GAS GFA VDR 300ML CX/12",
-    "group": "NAB",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.04,
-    "cost": 49,
-    "curve": "C"
-  },
-  {
-    "code": "25303",
-    "description": "GARRAFEIRA PL. PRETO BEES 1 UN P/24 GFA 600ML",
+    "code": "35617",
+    "description": "BEATS GREEN MIX LT 269ML SH C/8",
     "group": "MARKETPLACE",
     "unit": "un",
     "palletFactor": 84,
     "skuFactor": 1,
     "hectoFactor": 0.02,
-    "cost": 31.16,
+    "cost": 38.71,
     "curve": "C"
   },
   {
-    "code": "25335",
-    "description": "SALTON ESPUMANTE BRUT ROSE GFA VD 750 ML",
+    "code": "35620",
+    "description": "BEATS GREEN MIX LONG NECK 269ML SIX-PACK SH C/4",
+    "group": "MARKETPLACE",
+    "unit": "un",
+    "palletFactor": 84,
+    "skuFactor": 1,
+    "hectoFactor": 0.06,
+    "cost": 135,
+    "curve": "C"
+  },
+  {
+    "code": "35980",
+    "description": "CASAL GARCIA VINHO ROSE GFA VD 750 ML",
     "group": "MARKETPLACE",
     "unit": "un",
     "palletFactor": 84,
     "skuFactor": 1,
     "hectoFactor": 0.01,
-    "cost": 40.18,
+    "cost": 53.49,
     "curve": "C"
   },
   {
-    "code": "25347",
-    "description": "SALTON ESPUMANTE CLASSIC MOSCATEL GFA VD 750 ML",
+    "code": "35992",
+    "description": "CASAL GARCIA VINHO BR VERDE GFA VD 750 ML",
     "group": "MARKETPLACE",
     "unit": "un",
     "palletFactor": 84,
     "skuFactor": 1,
     "hectoFactor": 0.01,
-    "cost": 40.18,
+    "cost": 51,
     "curve": "C"
   },
   {
-    "code": "25429",
-    "description": "MATUTA CACHACA CRISTAL GARRAFA VIDRO 1 L",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 21.92,
-    "curve": "C"
-  },
-  {
-    "code": "25430",
-    "description": "MATUTA CACHACA UMBURANA GARRAFA VIDRO 1 L",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 25.28,
-    "curve": "C"
-  },
-  {
-    "code": "27560",
-    "description": "CASILLERO DEL DIABLO VINH RESERVA MALBEC GFA VD 750 ML",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 51.57,
-    "curve": "C"
-  },
-  {
-    "code": "27562",
-    "description": "CASILLERO DEL DIABLO VINH RESERVA MERLOT GFA VD 750 ML",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 51.57,
-    "curve": "C"
-  },
-  {
-    "code": "27566",
-    "description": "RESERVADO VINHO SWEET RED GFA VD 750 ML",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 28.81,
-    "curve": "C"
-  },
-  {
-    "code": "29416",
-    "description": "CERVEGELA BUDWEISER 1 UN P/ GF 600ML CX3",
+    "code": "36034",
+    "description": "BUDWEISER LT 473ML SH C12 NP MULTIPACK",
     "group": "CERVEJA",
     "unit": "un",
     "palletFactor": 84,
     "skuFactor": 1,
-    "hectoFactor": 0.02,
-    "cost": 51.77,
+    "hectoFactor": 0.06,
+    "cost": 64.88,
     "curve": "C"
   },
   {
-    "code": "29418",
-    "description": "CERVEGELA BUDWEISER LITRAO 1 UN P/ GF 1L PACK C3",
+    "code": "37450",
+    "description": "BUDWEISER LT SLEEK 350ML SH C 12 MULTIPACK",
     "group": "CERVEJA",
     "unit": "un",
     "palletFactor": 84,
     "skuFactor": 1,
-    "hectoFactor": 0.03,
-    "cost": 51.77,
-    "curve": "C"
-  },
-  {
-    "code": "29504",
-    "description": "OLD PARR WHISKY 12 ANOS GFA VD 750 ML",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 98.9,
-    "curve": "C"
-  },
-  {
-    "code": "29505",
-    "description": "CIROC VODKA GFA VD 750 ML",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 162.39,
-    "curve": "C"
-  },
-  {
-    "code": "29926",
-    "description": "JOHNNIE  WALKER BLACK LABEL WHISKY ICONS GARRAFA VIDRO 1 L",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 177.42,
-    "curve": "C"
-  },
-  {
-    "code": "31713",
-    "description": "YPE AMACIANTE CONC PINK FRASCO PLAST 500ML CX/12",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.06,
-    "cost": 86.21,
-    "curve": "C"
-  },
-  {
-    "code": "32126",
-    "description": "AMINDUS GRELHADITOS AMEND. TOR. S/ PELE PCT 24G FD C/60",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 26.53,
-    "curve": "C"
-  },
-  {
-    "code": "32538",
-    "description": "PERGOLA SEL. VINHO TINTO SUAVE GARRAFA VIDRO 1 L",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 21.5,
-    "curve": "C"
-  },
-  {
-    "code": "32648",
-    "description": "BUBBALOO MORANGO DISPLAY 5G CX/60",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 12.44,
-    "curve": "C"
-  },
-  {
-    "code": "32969",
-    "description": "RED BULL SUMMER MORANGO E PESSEGO LATA 250ML FOUR PACK NPAL",
-    "group": "NAB",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 31.96,
-    "curve": "C"
-  },
-  {
-    "code": "33854",
-    "description": "YPE TIXAN LAVA ROUPAS LIQ PRIMAVERA FRASCO PLAST 1L",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 120.6,
-    "curve": "C"
-  },
-  {
-    "code": "34420",
-    "description": "RED BULL SUMMER MARACUJA E MELAO LATA 250ML FOUR PACK NPAL",
-    "group": "NAB",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 29.16,
-    "curve": "C"
-  },
-  {
-    "code": "34432",
-    "description": "RED BULL TROPICAL BR LATA 473ML CX C 12",
-    "group": "NAB",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.06,
-    "cost": 140.44,
-    "curve": "C"
-  },
-  {
-    "code": "34770",
-    "description": "RED BULL SUGAR FREE POMELO LATA 250ML FOUR PACK NPAL",
-    "group": "NAB",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 31.96,
-    "curve": "C"
-  },
-  {
-    "code": "34923",
-    "description": "DIAS DAVILA AGUA MINERAL C GAS GFA PET 500ML PACK C/12",
-    "group": "NAB",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.06,
-    "cost": 19.59,
+    "hectoFactor": 0.04,
+    "cost": 41.69,
     "curve": "C"
   },
   {
@@ -3045,28 +3243,6 @@ export const DEFAULT_PRODUCTS: Product[] = [
     "skuFactor": 1,
     "hectoFactor": 0.01,
     "cost": 48.9,
-    "curve": "C"
-  },
-  {
-    "code": "25433",
-    "description": "MATUTA CACHACA COCO GARRAFA VIDRO 1 L",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 0,
-    "curve": "C"
-  },
-  {
-    "code": "35134",
-    "description": "YPE SABAO BARRA NEUTRO PCT PLAST 800G",
-    "group": "MARKETPLACE",
-    "unit": "un",
-    "palletFactor": 84,
-    "skuFactor": 1,
-    "hectoFactor": 0.01,
-    "cost": 8.95,
     "curve": "C"
   }
 ];

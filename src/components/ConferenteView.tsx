@@ -2056,31 +2056,39 @@ export default function ConferenteView({
   }, [audits]);
 
   const filteredProducts = useMemo(() => {
+    const search = productSearch.trim().toLowerCase();
+    if (!search) {
+      return products.slice(0, 50);
+    }
     return products
       .filter(p => 
-        p.description.toLowerCase().includes(productSearch.toLowerCase()) ||
-        p.code.includes(productSearch)
+        (p.description || '').toLowerCase().includes(search) ||
+        String(p.code || '').toLowerCase().includes(search)
       )
       .sort((a, b) => {
         const countA = productUsageCounts[a.code] || 0;
         const countB = productUsageCounts[b.code] || 0;
         return countB - countA;
       })
-      .slice(0, 5);
+      .slice(0, 50);
   }, [products, productSearch, productUsageCounts]);
 
   const filteredExchangeProducts = useMemo(() => {
+    const search = exchangeSearch.trim().toLowerCase();
+    if (!search) {
+      return products.slice(0, 50);
+    }
     return products
       .filter(p => 
-        p.description.toLowerCase().includes(exchangeSearch.toLowerCase()) ||
-        p.code.includes(exchangeSearch)
+        (p.description || '').toLowerCase().includes(search) ||
+        String(p.code || '').toLowerCase().includes(search)
       )
       .sort((a, b) => {
         const countA = productUsageCounts[a.code] || 0;
         const countB = productUsageCounts[b.code] || 0;
         return countB - countA;
       })
-      .slice(0, 5);
+      .slice(0, 50);
   }, [products, exchangeSearch, productUsageCounts]);
 
   const getMergedFinalItems = (session: AuditSession): AuditItem[] => {

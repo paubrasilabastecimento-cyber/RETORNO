@@ -186,7 +186,10 @@ function AuditHistoryDetails({ audit }: { audit: AuditSession }) {
                       const diff = phys - fisc;
                       return (
                         <tr key={item.productCode} className="hover:bg-slate-100/30">
-                          <td className="p-2 font-medium">{item.productDescription || item.productCode}</td>
+                          <td className="p-2 font-medium">
+                            {item.productCode && <span className="font-mono text-[10px] text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded font-bold mr-1.5 font-mono">[{item.productCode}]</span>}
+                            {item.productDescription || item.productCode}
+                          </td>
                           <td className="p-2 text-center font-mono">{phys}</td>
                           <td className="p-2 text-center font-mono">{fisc}</td>
                           <td className={`p-2 text-right font-bold font-mono ${
@@ -2864,11 +2867,11 @@ export default function FiscalView({
   };
 
   const recFilteredProducts = recProductSearch.trim() === ''
-    ? []
+    ? products.slice(0, 50)
     : products.filter(p => 
-        p.code.toLowerCase().includes(recProductSearch.toLowerCase()) || 
-        p.description.toLowerCase().includes(recProductSearch.toLowerCase())
-      ).slice(0, 10);
+        String(p.code || '').toLowerCase().includes(recProductSearch.trim().toLowerCase()) || 
+        (p.description || '').toLowerCase().includes(recProductSearch.trim().toLowerCase())
+      ).slice(0, 50);
 
   const handleSelectRecProduct = (prod: Product) => {
     setRecSelectedProductCode(prod.code);
