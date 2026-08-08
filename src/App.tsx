@@ -18,13 +18,21 @@ import { ClipboardCheck, ShieldCheck, BarChart3, AlertCircle, Bell, CheckCircle2
 function repairProductsList(list: Product[]) {
   const existing = list || [];
   const repaired = existing.map(p => {
-    if (p.description === p.code || !p.description || p.description.trim() === '') {
-      const original = DEFAULT_PRODUCTS.find(dp => dp.code === p.code || String(dp.code) === String(p.code));
-      if (original) {
-        return { ...p, description: original.description };
+    const original = DEFAULT_PRODUCTS.find(dp => dp.code === p.code || String(dp.code) === String(p.code));
+    let description = p.description;
+    if (!description || description.trim() === '' || description === p.code) {
+      if (original?.description) {
+        description = original.description;
       }
     }
-    return p;
+    const cost = (typeof p.cost === 'number' && !isNaN(p.cost) && p.cost > 0)
+      ? p.cost
+      : (original?.cost ?? p.cost ?? 0);
+    const hectoFactor = (typeof p.hectoFactor === 'number' && !isNaN(p.hectoFactor) && p.hectoFactor > 0)
+      ? p.hectoFactor
+      : (original?.hectoFactor ?? p.hectoFactor ?? 0);
+
+    return { ...p, description: description || `PRODUTO ${p.code}`, cost, hectoFactor };
   });
 
   // Ensure all master catalog products are present

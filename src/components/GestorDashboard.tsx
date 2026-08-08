@@ -1610,8 +1610,11 @@ export default function GestorDashboard({
         if (cols.length <= Math.max(codeIdx, descIdx)) continue;
 
         const code = cols[codeIdx]?.trim();
-        const description = cols[descIdx]?.trim().toUpperCase();
-        if (!code || !description) continue;
+        if (!code) continue;
+
+        const masterProd = DEFAULT_PRODUCTS.find(dp => dp.code === code || String(dp.code) === String(code));
+        const rawDesc = cols[descIdx]?.trim().toUpperCase();
+        const description = (rawDesc && rawDesc !== code) ? rawDesc : (masterProd?.description || `PRODUTO ${code}`);
 
         const parseValue = (val: string | undefined): number => {
           if (!val) return 0;
@@ -1626,8 +1629,16 @@ export default function GestorDashboard({
           return isNaN(parsed) ? 0 : parsed;
         };
 
-        const costSku = costSkuIdx !== -1 ? parseValue(cols[costSkuIdx]) : 0;
-        const hectoVal = hectoIdx !== -1 ? (parseValue(cols[hectoIdx]) || 0.01) : 0.01;
+        let costSku = costSkuIdx !== -1 ? parseValue(cols[costSkuIdx]) : 0;
+        if (costSku === 0 && masterProd?.cost) {
+          costSku = masterProd.cost;
+        }
+
+        let hectoVal = hectoIdx !== -1 ? parseValue(cols[hectoIdx]) : 0;
+        if (hectoVal === 0 && masterProd?.hectoFactor) {
+          hectoVal = masterProd.hectoFactor;
+        }
+        if (hectoVal === 0) hectoVal = 0.01;
 
         const existingIdx = updatedProductsList.findIndex(p => p.code === code);
 
@@ -4077,28 +4088,47 @@ export default function GestorDashboard({
                     </thead>
                     <tbody className="bg-white divide-y divide-slate-100">
                       {products
-                        .filter(p => p.description.toLowerCase().includes(searchQuery.toLowerCase()) || p.code.includes(searchQuery))
-                        .map(p => (
-                          <tr key={p.code} className="hover:bg-slate-50">
-                            <td className="px-4 py-2 font-mono font-bold text-slate-600 bg-slate-50/50">{p.code}</td>
-                            <td className="px-4 py-2 font-semibold text-slate-800">{p.description}</td>
-                            <td className="px-4 py-2 text-right font-mono font-semibold text-slate-900">
-                              R$ {p.cost.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
-                            </td>
-                            <td className="px-4 py-2 text-right font-mono font-semibold text-slate-500">
-                              {(p.hectoFactor || 0).toLocaleString('pt-BR', { minimumFractionDigits: 4 })} HL
-                            </td>
-                            <td className="px-4 py-2 text-right">
-                              <button
-                                type="button"
-                                onClick={() => handleRemoveProduct(p.code)}
-                                className="text-slate-400 hover:text-red-600 transition p-1"
-                              >
-                                <Trash2 className="h-3.5 w-3.5" />
-                              </button>
-                            </td>
-                          </tr>
-                        ))}
+                        .filter(p => {
+                          const desc = p.description || DEFAULT_PRODUCTS.find(dp => String(dp.code) === String(p.code))?.description || '';
+                          const code = String(p.code || '');
+                          const q = searchQuery.toLowerCase().trim();
+                          return desc.toLowerCase().includes(q) || code.includes(q);
+                        })
+                        .map(p => {
+                          const master = DEFAULT_PRODUCTS.find(dp => String(dp.code) === String(p.code));
+                          const displayDesc = (p.description && p.description.trim() !== '' && p.description !== p.code)
+                            ? p.description
+                            : (master?.description || `PRODUTO ${p.code}`);
+                          const displayCost = (typeof p.cost === 'number' && !isNaN(p.cost) && p.cost > 0)
+                            ? p.cost
+                            : (master?.cost ?? 0);
+                          const displayHecto = (typeof p.hectoFactor === 'number' && !isNaN(p.hectoFactor) && p.hectoFactor > 0)
+                            ? p.hectoFactor
+                            : (master?.hectoFactor ?? 0);
+
+                          return (
+                            <tr key={p.code} className="hover:bg-slate-50">
+                              <td className="px-4 py-2 font-mono font-bold text-slate-600 bg-slate-50/50">{p.code}</td>
+                              <td className="px-4 py-2 font-semibold text-slate-800">{displayDesc}</td>
+                              <td className="px-4 py-2 text-right font-mono font-semibold text-slate-900">
+                                R$ {displayCost.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 4 })}
+                              </td>
+                              <td className="px-4 py-2 text-right font-mono font-semibold text-slate-500">
+                                {displayHecto.toLocaleString('pt-BR', { minimumFractionDigits: 4, maximumFractionDigits: 5 })} HL
+                              </td>
+                              <td className="px-4 py-2 text-right">
+                                <button
+                                  type="button"
+                                  onClick={() => handleRemoveProduct(p.code)}
+                                  className="text-slate-400 hover:text-red-600 transition p-1 cursor-pointer"
+                                  title="Excluir produto"
+                                >
+                                  <Trash2 className="h-3.5 w-3.5" />
+                                </button>
+                              </td>
+                            </tr>
+                          );
+                        })}
                     </tbody>
                   </table>
                 </div>
