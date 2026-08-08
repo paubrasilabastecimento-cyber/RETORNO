@@ -438,7 +438,7 @@ export function getActiveFirebaseConfig(): any {
           }
           const presetMatch = FIREBASE_PRESETS.find(p => p.id === parsed.projectId || p.config.projectId === parsed.projectId);
           if (presetMatch) {
-            return presetMatch.config;
+            return { ...presetMatch.config, ...parsed };
           }
           return parsed;
         }

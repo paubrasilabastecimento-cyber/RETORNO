@@ -4,7 +4,7 @@ import { BarChart3, Users, Truck, ShoppingBag, Plus, Trash2, Shield, Clock, Land
 import { ImageDB, PhotoRecord } from '../imageDb';
 import { DEFAULT_USERS, DEFAULT_PRODUCTS, DEFAULT_DRIVERS, DEFAULT_VEHICLES } from '../data';
 import { DEFAULT_MANUAL_HTML } from './DefaultManualContent';
-import { isClientFirebaseActive, getGeminiKeyFromFirestore, saveGeminiKeyToFirestore, getActiveFirebaseConfig } from '../clientFirebase';
+import { isClientFirebaseActive, getGeminiKeyFromFirestore, saveGeminiKeyToFirestore, getActiveFirebaseConfig, switchActiveFirebaseConfig } from '../clientFirebase';
 import { DatabaseSwitcher } from './DatabaseSwitcher';
 import { triggerGlobalDatabaseSwitch } from '../utils/databaseScheduler';
 import ExportDataView from './ExportDataView';
@@ -458,52 +458,38 @@ export default function GestorDashboard({
     }
     setSaveLoading(true);
     setTestResult(null);
-    if (isClientFirebaseActive()) {
-      try {
-        const config = {
-          apiKey: formApiKey.trim(),
-          authDomain: formAuthDomain.trim(),
-          projectId: formProjectId.trim(),
-          storageBucket: formStorageBucket.trim(),
-          messagingSenderId: formMessagingSenderId.trim(),
-          appId: formAppId.trim(),
-          measurementId: formMeasurementId.trim(),
-          firestoreDatabaseId: formFirestoreDatabaseId.trim(),
-        };
-        localStorage.setItem('logiroute_firebase_client_config', JSON.stringify(config));
-        setTestResult({ success: true, message: "Configuração do Firebase salva localmente no navegador!" });
-        fetchFirebaseStatus();
-      } catch (err: any) {
-        setTestResult({ success: false, message: err?.message || "Erro ao salvar localmente." });
-      } finally {
-        setSaveLoading(false);
-      }
-      return;
-    }
     try {
-      const res = await fetch('/api/firebase/config', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          apiKey: formApiKey.trim(),
-          authDomain: formAuthDomain.trim(),
-          projectId: formProjectId.trim(),
-          storageBucket: formStorageBucket.trim(),
-          messagingSenderId: formMessagingSenderId.trim(),
-          appId: formAppId.trim(),
-          measurementId: formMeasurementId.trim(),
-          firestoreDatabaseId: formFirestoreDatabaseId.trim(),
-        }),
-      });
-      const data = await res.json();
-      if (data.success) {
-        setTestResult({ success: true, message: "Configurações salvas e aplicadas com sucesso para todos os usuários!" });
-        fetchFirebaseStatus();
-      } else {
-        setTestResult({ success: false, message: data.error || "Erro ao salvar configurações do Firebase." });
+      const config = {
+        apiKey: formApiKey.trim(),
+        authDomain: formAuthDomain.trim(),
+        projectId: formProjectId.trim(),
+        storageBucket: formStorageBucket.trim(),
+        messagingSenderId: formMessagingSenderId.trim(),
+        appId: formAppId.trim(),
+        measurementId: formMeasurementId.trim(),
+        firestoreDatabaseId: formFirestoreDatabaseId.trim(),
+      };
+
+      // Apply locally and broadcast to client runtime
+      await switchActiveFirebaseConfig(config, true, true, false);
+
+      if (!isClientFirebaseActive()) {
+        try {
+          await fetch('/api/firebase/config', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(config),
+          });
+        } catch (e) {
+          console.warn('[GestorDashboard] Erro ao enviar /api/firebase/config', e);
+        }
       }
+
+      setTestResult({ success: true, message: "Configurações salvas e aplicadas com sucesso no navegador e para a sessão ativa!" });
+      fetchFirebaseStatus();
+      fetchFirebaseConfig();
     } catch (err: any) {
-      setTestResult({ success: false, message: err?.message || "Erro na conexão com o servidor." });
+      setTestResult({ success: false, message: err?.message || "Erro ao salvar configurações do Firebase." });
     } finally {
       setSaveLoading(false);
     }
