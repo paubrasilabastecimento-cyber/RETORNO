@@ -847,7 +847,22 @@ export function subscribeToFirestore(onUpdate: (db: any) => void): () => void {
             saveDocsToFirestore("users", DEFAULT_USERS);
           }
 
-          const items = snapshot.docs.map((d) => ({
+          let docsToUse = snapshot.docs;
+          if (colName === "importedRoutes") {
+            docsToUse = snapshot.docs.filter((d) => {
+              const data = d.data();
+              const routeMapStr = String(data.routeMap || '');
+              const docId = d.id;
+              const isDemo = docId.includes("03.11.49") || docId.includes("3.11.49") || routeMapStr.includes("3.11.49") || routeMapStr.includes("03.11.49");
+              if (isDemo) {
+                deleteDoc(doc(db, "importedRoutes", d.id)).catch(() => {});
+                return false;
+              }
+              return true;
+            });
+          }
+
+          const items = docsToUse.map((d) => ({
             ...d.data(),
             id: d.id
           }));
@@ -918,7 +933,22 @@ export async function fetchDirectlyFromFirestore(): Promise<any> {
         } else {
           const collRef = collection(db, colName);
           const snap = await getDocs(collRef);
-          const items = snap.docs.map((d) => ({
+          let docsToUse = snap.docs;
+          if (colName === "importedRoutes") {
+            docsToUse = snap.docs.filter((d) => {
+              const data = d.data();
+              const routeMapStr = String(data.routeMap || '');
+              const docId = d.id;
+              const isDemo = docId.includes("03.11.49") || docId.includes("3.11.49") || routeMapStr.includes("3.11.49") || routeMapStr.includes("03.11.49");
+              if (isDemo) {
+                deleteDoc(doc(db, "importedRoutes", d.id)).catch(() => {});
+                return false;
+              }
+              return true;
+            });
+          }
+
+          const items = docsToUse.map((d) => ({
             ...d.data(),
             id: d.id
           }));

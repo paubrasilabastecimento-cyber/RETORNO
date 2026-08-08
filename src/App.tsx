@@ -309,7 +309,15 @@ export default function App() {
   const cleanImportedRoutes = (list: ImportedRoute[]): ImportedRoute[] => {
     if (!list) return [];
     const now = new Date().toISOString();
-    return list.filter(Boolean).map(r => ({
+    return list.filter(r => {
+      if (!r) return false;
+      const mapCode = String(r.routeMap || '');
+      const docId = String(r.id || '');
+      if (mapCode.includes('3.11.49') || mapCode.includes('03.11.49') || docId.includes('3.11.49') || docId.includes('03.11.49')) {
+        return false;
+      }
+      return true;
+    }).map(r => ({
       ...r,
       routeMap: normalizeMapCode(r.routeMap),
       importedAt: r.importedAt || now,
