@@ -320,78 +320,7 @@ export default function LoginView({ users, onLoginSuccess }: LoginViewProps) {
           </p>
         </div>
 
-        {/* Verification Banner: Database & Shift Alignment */}
-        <div className="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white p-4 sm:p-5 border-b border-slate-800 space-y-3">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-            <div className="flex items-center space-x-3">
-              <div className={`p-2 rounded-xl border shrink-0 ${
-                activeProjectId === scheduledPreset?.config.projectId
-                  ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30'
-                  : 'bg-amber-500/20 text-amber-400 border-amber-500/30'
-              }`}>
-                <Database className="h-5 w-5" />
-              </div>
-              <div>
-                <div className="flex items-center space-x-2">
-                  <span className="text-xs font-bold uppercase tracking-wider text-amber-300">
-                    Banco do Turno Programado
-                  </span>
-                  <span className="text-[10px] font-extrabold bg-slate-800 text-slate-200 border border-slate-700 px-2 py-0.5 rounded-full uppercase flex items-center gap-1 font-mono">
-                    <Clock className="h-3 w-3 text-amber-400 animate-pulse" />
-                    {currentTimeStr || '00:00'}
-                  </span>
-                </div>
-                <p className="text-xs text-slate-300 mt-0.5 font-medium">
-                  {scheduledPreset?.name} • <span className="font-mono text-amber-200">{scheduledPreset?.config.projectId}</span>
-                </p>
-              </div>
-            </div>
 
-            <div className="flex items-center gap-2 self-start sm:self-auto">
-              {activeProjectId === scheduledPreset?.config.projectId ? (
-                <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[10px] font-bold px-2.5 py-1 rounded-lg uppercase flex items-center gap-1.5 font-mono shadow-xs">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400" />
-                  Conectado ao Banco Correto
-                </span>
-              ) : (
-                <button
-                  type="button"
-                  onClick={handleForceAlignDatabase}
-                  disabled={isAligning}
-                  className="bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-[10px] uppercase px-3.5 py-1.5 rounded-lg flex items-center gap-1.5 transition cursor-pointer active:scale-95 shadow-md"
-                >
-                  <RefreshCw className={`h-3.5 w-3.5 ${isAligning ? 'animate-spin' : ''}`} />
-                  <span>Alinhar Banco do Turno</span>
-                </button>
-              )}
-            </div>
-          </div>
-
-          {/* Divergence warning card if not connected to correct database */}
-          {activeProjectId !== scheduledPreset?.config.projectId && (
-            <div className="bg-amber-500/10 border border-amber-500/30 rounded-xl p-3 text-xs text-amber-200 space-y-1">
-              <div className="flex items-center gap-2 font-bold text-amber-300">
-                <AlertTriangle className="h-4 w-4 text-amber-400 shrink-0" />
-                <span>Atenção: Banco de Dados Divergente do Horário Fixado</span>
-              </div>
-              <p className="text-[11px] text-slate-300 leading-relaxed">
-                Você está atualmente conectado a <span className="font-mono text-amber-200 font-bold">{activeProjectId || 'banco desconhecido'}</span>.
-                No horário atual ({currentTimeStr}), a escala exige o <span className="font-bold text-white">{scheduledPreset?.name}</span> (<span className="font-mono text-amber-200">{scheduledPreset?.config.projectId}</span>).
-              </p>
-              <div className="text-[10px] text-emerald-400 font-medium flex items-center gap-1 pt-0.5">
-                <ArrowRightLeft className="h-3 w-3 shrink-0" />
-                <span>O sistema alternará automaticamente para o banco correto assim que você clicar em <strong>"Entrar no Sistema"</strong> ou no botão <strong>"Alinhar Banco do Turno"</strong>.</span>
-              </div>
-            </div>
-          )}
-
-          {alignMessage && (
-            <div className="text-[11px] text-amber-200 font-mono bg-white/5 border border-amber-500/20 rounded-md p-2 flex items-center gap-1.5">
-              <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400 shrink-0" />
-              <span>{alignMessage}</span>
-            </div>
-          )}
-        </div>
 
         {/* Login Form */}
         <form onSubmit={handleSubmit} className="p-6 md:p-8 space-y-4">
