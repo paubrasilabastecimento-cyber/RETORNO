@@ -842,21 +842,9 @@ export function subscribeToFirestore(onUpdate: (db: any) => void): () => void {
             window.dispatchEvent(new CustomEvent('firestore_synced', { detail: { time: lastSuccessfulSyncTime } }));
           }
 
-          // Seed defaults directly to Firestore if empty
-          if (snapshot.empty) {
-            if (colName === "users" && DEFAULT_USERS.length > 0) {
-              saveDocsToFirestore("users", DEFAULT_USERS);
-            } else if (colName === "drivers" && DEFAULT_DRIVERS.length > 0) {
-              saveDocsToFirestore("drivers", DEFAULT_DRIVERS);
-            } else if (colName === "vehicles" && DEFAULT_VEHICLES.length > 0) {
-              saveDocsToFirestore("vehicles", DEFAULT_VEHICLES);
-            } else if (colName === "products" && DEFAULT_PRODUCTS.length > 0) {
-              saveDocsToFirestore("products", DEFAULT_PRODUCTS);
-            } else if (colName === "activeAssets" && DEFAULT_ACTIVE_ASSETS.length > 0) {
-              saveDocsToFirestore("activeAssets", DEFAULT_ACTIVE_ASSETS);
-            } else if (colName === "importedRoutes" && DEFAULT_IMPORTED_ROUTES.length > 0) {
-              saveDocsToFirestore("importedRoutes", DEFAULT_IMPORTED_ROUTES);
-            }
+          // Only seed default users if users collection is completely empty (to allow login)
+          if (snapshot.empty && colName === "users" && DEFAULT_USERS.length > 0) {
+            saveDocsToFirestore("users", DEFAULT_USERS);
           }
 
           const items = snapshot.docs.map((d) => ({
